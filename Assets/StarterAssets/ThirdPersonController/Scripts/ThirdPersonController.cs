@@ -108,6 +108,9 @@ namespace StarterAssets
 
         private bool _hasAnimator;
 
+        public GameObject goatUI;
+        public GameObject flyUI;
+
         public GameObject goat;
         public Transform spawnGoat;
 
@@ -426,10 +429,12 @@ namespace StarterAssets
             if (other.CompareTag("GoatPower"))
             {
                 pGoat = true;
+                goatUI.SetActive(true);
             }
             if(other.CompareTag("FlyPower"))
             {
                 canFly = true;
+                flyUI.SetActive(true);
             }
         }
     }
